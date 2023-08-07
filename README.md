@@ -1,7 +1,7 @@
 # Welcome to the Americana Stack Tutorial
 
 ## Tutorial Outiline
-### Lecture: Version control: git, GitHub, issues & PRs, etiquette for FOSS projects, mention CI/CD but don’t teach
+### Lecture: Version control: git, GitHub, issues & PRs, etiquette for FOSS projects, CI/CD
 ### Exercise:
    - Initial Git client configuration (set username and email, sign in to GitHub)
    - Fork the [tutorial repo](https://github.com/nasa-gcn/americana-stack-tutorial)
