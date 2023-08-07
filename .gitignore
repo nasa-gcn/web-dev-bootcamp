@@ -1,0 +1,13 @@
+.DS_Store
+node_modules
+
+/app/theme.css
+/app/theme.css.map
+/.cache
+/build
+preferences.arc
+sam.json
+sam.yaml
+.env
+.eslintcache
+*.tsbuildinfo
