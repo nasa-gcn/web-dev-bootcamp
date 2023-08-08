@@ -8,7 +8,7 @@
    - Make a branch
    - Make a PR, review someone else’s!
    - Merge it!
-### Lecture: Modern JavaScript: modules, JavaScript on the server, the NPM ecosystem, types, JSX
+### Lecture: [Modern JavaScript](./syllabus/modern-javascript.md)
 ### Tutorial: Remix routing, React components, server and client side builds.
    - Routes, <Link>. Nested routing
    - JSX: Forms, fun with USWDS components, accessibility attributes, etc.
