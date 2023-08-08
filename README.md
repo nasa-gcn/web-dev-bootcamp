@@ -1,33 +1,12 @@
 # Welcome to the Americana Stack Tutorial
 
 ## Tutorial Outiline
-### Lecture: Version control: git, GitHub, issues & PRs, etiquette for FOSS projects, CI/CD
-### Exercise:
-   - Initial Git client configuration (set username and email, sign in to GitHub)
-   - Fork the [tutorial repo](https://github.com/nasa-gcn/americana-stack-tutorial)
-   - Make a branch
-   - Make a PR, review someone else’s!
-   - Merge it!
-### Lecture: Modern JavaScript: modules, JavaScript on the server, the NPM ecosystem, types, JSX
-### Tutorial: Remix routing, React components, server and client side builds.
-   - Routes, <Link>. Nested routing
-   - JSX: Forms, fun with USWDS components, accessibility attributes, etc.
-   - Loaders
-      - Calling an external API with Web Fetch (see https://astroquery.readthedocs.io/en/latest/ for some astronomy web services we can call. Note https://astroquery.readthedocs.io/en/latest/heasarc/heasarc.html)
-      - Retrieving data from DynamoDB
-   - Actions
-      - Writing data to DynamoDB
-   - Nested routes, dynamic routes (e.g. index of database entities & detail view)
-   - Advanced: fetchers, optimistic UI?
-### Lecture: Cloud basics: cloud computing (instances vs. containers vs. functions), databases (document vs. relational + Prisma), message queues, infrastructure as code
-- Tutorial: deploy your application to AWS!
-- Lecture: How this all fits together in GCN
-
-## Tutorial Contents
-- Take some astronomical transient submitted via a form (time, ra, dec, error radius)
-- query HEASARC to find all previous observations of that location on the sky.
-- The results could be written to a dynamoDB for all the sources or observations ever taken that are consistent with that transient.
-
+- [Git Lecture](./syllabus/git-lecture.md)
+- [Git Exercise](./syllabus/git-exercise.md)
+-  Lecture: Modern JavaScript: modules, JavaScript on the server, the NPM ecosystem, types, JSX
+- [Web Dev Exercise](./syllabus/web-dev-exercise.md)
+- [Cloud Basics Lecture](./syllabus/cloud-basics-lecture.md)
+- [Tutorial Walkthrough](./syllabus/tutorial-walkthrough.md)
 
 ## Prerequisites
 
