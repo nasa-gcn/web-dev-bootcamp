@@ -65,6 +65,20 @@ Think about code like a lego, that can snap into place. Modules are like legos t
   - transpilers are like translators, they convert from one syntax to another
 - we use JSX with react
   - this makes development easier
+- all JSX code is typically wrapped in a return statement at the end of a function or default function
+- JSX code is contained within a tag, usually we use an empty div <></>
 
 ### resources:
 - https://www.w3schools.com/react/react_jsx.asp
+
+## React
+- open source library used for building UI component based user interfaces
+- react alone can be time consuming to write, so that's why we use JSX
+- react uses a virtual DOM in memory. It makes changes to the virtual DOM before making changes in the browser DOM.
+  - "The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web."
+- react handles watching for changes and applying those changes ONLY to the elements that have changed
+
+### resources:
+- https://www.w3schools.com/REACT/react_intro.asp
+- https://www.w3schools.com/REACT/DEFAULT.ASP
+- https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
