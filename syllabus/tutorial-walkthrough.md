@@ -1,4 +1,8 @@
 # Tutorial Walkthrough
-- Take some astronomical transient submitted via a form (time, ra, dec, error radius)
-- query HEASARC to find all previous observations of that location on the sky.
-- The results could be written to a dynamoDB for all the sources or observations ever taken that are consistent with that transient.
+Throughout this course you will be building your own app.
+
+During the course you will learn how to
+1. create a form
+2. use the form data to get data from another api
+3. store the data you got from the api
+4. retrieve and display the data that was stored locally
