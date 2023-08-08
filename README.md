@@ -3,7 +3,7 @@
 ## Tutorial Outiline
 - [Git Lecture](./syllabus/git-lecture.md)
 - [Git Exercise](./syllabus/git-exercise.md)
--  Lecture: Modern JavaScript: modules, JavaScript on the server, the NPM ecosystem, types, JSX
+- [Modern JavaScript Lecture](./syllabus/modern-javascript.md)
 - [Web Dev Exercise](./syllabus/web-dev-exercise.md)
 - [Cloud Basics Lecture](./syllabus/cloud-basics-lecture.md)
 - [Tutorial Walkthrough](./syllabus/tutorial-walkthrough.md)
