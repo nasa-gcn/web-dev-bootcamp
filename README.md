@@ -10,12 +10,25 @@
 
 ## Tutorial Outline
 
-- [Git Lecture](./syllabus/git-lecture.md)
-- [Git Exercise](./syllabus/git-exercise.md)
-- [Modern JavaScript Lecture](./syllabus/modern-javascript.md)
-- [Web Dev Exercise](./syllabus/web-dev-exercise.md)
-- [Cloud Basics Lecture](./syllabus/cloud-basics-lecture.md)
-- [Tutorial Walkthrough](./syllabus/tutorial-walkthrough.md)
+<table>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Location</th>
+      <th>Topic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td colspan="3">Monday, August 14, 2023</td></tr>
+    <tr><td>TBD</td><td>TBD</td><td><a href="syllabus/git-lecture.md">Git Lecture</a></td>
+    <tr><td>TBD</td><td>TBD</td><td><a href="syllabus/git-exercise.md">Git Exercise</a></td>
+    <tr><td>TBD</td><td>TBD</td><td><a href="syllabus/modern-javascript.md">Modern JavaScript Lecture</a></td>
+    <tr><td>TBD</td><td>TBD</td><td><a href="syllabus/web-dev-exercise.md">Web Dev Exercise</a></td>
+    <tr><td colspan="3">Monday, August 15, 2023</td></tr>
+    <tr><td>TBD</td><td>TBD</td><td><a href="syllabus/cloud-basics-lecture.md">Cloud Basics Lecture</a></td>
+    <tr><td>TBD</td><td>TBD</td><td><a href="syllabus/tutorial-walkthrough.md">Tutorial Walkthrough</a></td>
+  </tbody>
+</table>
 
 ## Development
 
