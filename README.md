@@ -4,6 +4,7 @@
 
 - Create a [GitHub account](https://github.com)
 - Install, on your own computer:
+  - [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
   - [VS Code](https://code.visualstudio.com/download)
   - [Node.js](https://nodejs.org/en/download)
   - [Slack](https://slack.com/downloads/)
