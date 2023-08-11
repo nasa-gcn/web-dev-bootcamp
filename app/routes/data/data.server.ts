@@ -1,3 +1,6 @@
+import { tables } from '@architect/functions'
+import { v4 as uuidv4 } from 'uuid'
+
 async function fetchData(
   instrument: string,
   format: string,
@@ -50,4 +53,34 @@ export async function getInstrumentData(
   } catch (error) {
     console.log(error)
   }
+}
+
+export async function createNewNote(
+  noteTitle: string,
+  noteBody: string,
+  userId: string
+) {
+  const db = await tables()
+  const noteId = uuidv4()
+
+  await db.notes.put({
+    userId,
+    noteId,
+    noteTitle,
+    noteBody,
+  })
+}
+
+export async function getNotes(userId: string) {
+  const db = await tables()
+  const results = await db.notes.query({
+    KeyConditionExpression: '#userId = :userId',
+    ExpressionAttributeNames: {
+      '#userId': 'userId',
+    },
+    ExpressionAttributeValues: {
+      ':userId': userId,
+    },
+  })
+  return results.Items
 }
