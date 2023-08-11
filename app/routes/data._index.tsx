@@ -6,7 +6,7 @@ export default function () {
       <h1>Instrument Data</h1>
       <div>
         <Link to="/data/new" className="usa-button">
-          Create New Instrument Data
+          New Data Gathering Session
         </Link>
       </div>
     </div>

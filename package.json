@@ -43,12 +43,14 @@
     "@remix-run/css-bundle": "^1.19.2",
     "@remix-run/node": "^1.19.2",
     "@remix-run/react": "^1.19.2",
+    "@types/uuid": "^9.0.2",
     "@trussworks/react-uswds": "^5.1.1",
     "cross-env": "^7.0.3",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "source-map-support": "^0.5.21"
+    "source-map-support": "^0.5.21",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@architect/architect": "^10.12.1",

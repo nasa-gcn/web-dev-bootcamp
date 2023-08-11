@@ -678,7 +678,6 @@ export const tableOptions = [
   'rassbscpgc',
   'rasscals',
   'rasscndins',
-
   'rasscns3',
   'rassdssagn',
   'rassdsstar',
