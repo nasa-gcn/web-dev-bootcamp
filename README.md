@@ -1,5 +1,13 @@
 # Welcome to the Americana Stack Tutorial
 
+## Prerequisites
+
+- Create a [GitHub account](https://github.com)
+- Install, on your own computer:
+  - [VS Code](https://code.visualstudio.com/download)
+  - [Node.js](https://nodejs.org/en/download)
+  - [Slack](https://slack.com/downloads/)
+
 ## Tutorial Outiline
 
 - [Git Lecture](./syllabus/git-lecture.md)
@@ -8,14 +16,6 @@
 - [Web Dev Exercise](./syllabus/web-dev-exercise.md)
 - [Cloud Basics Lecture](./syllabus/cloud-basics-lecture.md)
 - [Tutorial Walkthrough](./syllabus/tutorial-walkthrough.md)
-
-## Prerequisites
-
-- Create a [GitHub account](https://github.com)
-- Install, on your own computer:
-  - [VS Code](https://code.visualstudio.com/download)
-  - [Node.js](https://nodejs.org/en/download)
-  - [Slack](https://slack.com/downloads/)
 
 ## Development
 
