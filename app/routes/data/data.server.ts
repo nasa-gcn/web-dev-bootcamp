@@ -1,6 +1,3 @@
-import { tables } from '@architect/functions'
-import { v4 as uuidv4 } from 'uuid'
-
 async function fetchData(
   instrument: string,
   format: string,
@@ -53,68 +50,4 @@ export async function getInstrumentData(
   } catch (error) {
     console.log(error)
   }
-}
-
-export async function createNewNote(
-  noteTitle: string,
-  noteBody: string,
-  userId: string
-) {
-  const db = await tables()
-  const noteId = uuidv4()
-
-  await db.notes.put({
-    userId,
-    noteId,
-    noteTitle,
-    noteBody,
-  })
-}
-
-export async function getNotes(userId: string) {
-  const db = await tables()
-  const results = await db.notes.query({
-    KeyConditionExpression: '#userId = :userId',
-    ExpressionAttributeNames: {
-      '#userId': 'userId',
-    },
-    ExpressionAttributeValues: {
-      ':userId': userId,
-    },
-  })
-  return results.Items
-}
-
-export async function getNote(noteId: string, userId: string) {
-  const db = await tables()
-  const result = await db.notes.get({ userId, noteId })
-
-  return result
-}
-
-export async function updateNote(
-  userId: string,
-  noteId: string,
-  noteBody: string
-) {
-  const db = await tables()
-  const result = await db.notes.update({
-    Key: {
-      userId,
-      noteId,
-    },
-    UpdateExpression: 'set noteBody = :noteBody',
-    ExpressionAttributeValues: {
-      ':noteBody': noteBody,
-    },
-  })
-  return result
-}
-
-export async function deleteNote(userId: string, noteId: string) {
-  const db = await tables()
-  await db.notes.delete({
-    userId,
-    noteId,
-  })
 }
