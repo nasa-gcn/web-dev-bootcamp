@@ -55,6 +55,9 @@ export default function App() {
         <PrimaryNav
           className="margin-top-1"
           items={[
+            <NavLink className="" to="/notes" key="/notes">
+              Notes
+            </NavLink>,
             <NavLink className="" to="/data" key="/data">
               Data
             </NavLink>,
