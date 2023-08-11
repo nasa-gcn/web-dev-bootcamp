@@ -1,6 +1,7 @@
 # Welcome to the Americana Stack Tutorial
 
 ## Tutorial Outiline
+
 - [Git Lecture](./syllabus/git-lecture.md)
 - [Git Exercise](./syllabus/git-exercise.md)
 - [Modern JavaScript Lecture](./syllabus/modern-javascript.md)
@@ -12,10 +13,9 @@
 
 - Create a [GitHub account](https://github.com)
 - Install, on your own computer:
-   - [VS Code](https://code.visualstudio.com/download)
-   - [Node.js](https://nodejs.org/en/download)
-   - [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-   - [Slack](https://slack.com/downloads/)
+  - [VS Code](https://code.visualstudio.com/download)
+  - [Node.js](https://nodejs.org/en/download)
+  - [Slack](https://slack.com/downloads/)
 
 ## Development
 
@@ -31,7 +31,6 @@ $ npm run dev
 Your file changes are watched, and assets are rebuilt upon change.
 
 Open up [http://localhost:3333](http://localhost:3333) and you should be ready to go!
-
 
 ## Deploying
 
