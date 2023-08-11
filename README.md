@@ -1,4 +1,4 @@
-# Welcome to the Americana Stack Tutorial
+# Welcome to the Modern Web Dev Boot Camp
 
 ## Prerequisites
 
