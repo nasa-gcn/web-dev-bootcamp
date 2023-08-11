@@ -8,7 +8,7 @@
   - [Node.js](https://nodejs.org/en/download)
   - [Slack](https://slack.com/downloads/)
 
-## Tutorial Outiline
+## Tutorial Outline
 
 - [Git Lecture](./syllabus/git-lecture.md)
 - [Git Exercise](./syllabus/git-exercise.md)
