@@ -12,7 +12,7 @@ import {
   TextInput,
   Textarea,
 } from '@trussworks/react-uswds'
-import { getUserId } from 'lib/utils'
+import { getUserId } from 'app/lib/utils'
 import { useEffect, useRef, useState } from 'react'
 
 import { createNewNote, getInstrumentData, getNotes } from './data/data.server'
