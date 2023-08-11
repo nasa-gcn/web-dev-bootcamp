@@ -1,5 +1,5 @@
 import type { DataFunctionArgs } from '@remix-run/node'
-import { useFetcher } from '@remix-run/react'
+import { Link, useFetcher, useLoaderData } from '@remix-run/react'
 import {
   Button,
   ButtonGroup,
@@ -10,10 +10,12 @@ import {
   Label,
   Select,
   TextInput,
+  Textarea,
 } from '@trussworks/react-uswds'
-import { useState } from 'react'
+import { getUserId } from 'app/lib/utils'
+import { useEffect, useRef, useState } from 'react'
 
-import { getInstrumentData } from './data/data.server'
+import { createNewNote, getInstrumentData, getNotes } from './data/data.server'
 import { tableOptions } from './data/data.table-options'
 
 function validateResultCountInput(input: string) {
@@ -21,26 +23,47 @@ function validateResultCountInput(input: string) {
   return numericalInput.toString() === input && numericalInput <= 100
 }
 
-export async function action({ request }: DataFunctionArgs) {
-  const data = await request.formData()
-  const format = data.get('format')?.toString()
-  const resultCount = data.get('resultCount')?.toString()
-  const instrument = data.get('instrument')?.toString()
-  const ra = data.get('ra')?.toString()
-  const dec = data.get('dec')?.toString()
-  const radius = data.get('radius')?.toString()
+export async function loader({ request }: DataFunctionArgs) {
+  const userID = getUserId()
+  return await getNotes(userID)
+}
 
-  if (!instrument || !format || !resultCount || !ra || !dec || !radius)
+export async function action({ request }: DataFunctionArgs) {
+  const userID = getUserId()
+  const data = await request.formData()
+  const intent = data.get('intent')?.toString()
+
+  if (intent === 'get-data') {
+    const format = data.get('format')?.toString()
+    const resultCount = data.get('resultCount')?.toString()
+    const instrument = data.get('instrument')?.toString()
+    const ra = data.get('ra')?.toString()
+    const dec = data.get('dec')?.toString()
+    const radius = data.get('radius')?.toString()
+
+    if (!instrument || !format || !resultCount || !ra || !dec || !radius)
+      return null
+    const res = await getInstrumentData(
+      instrument,
+      format,
+      parseInt(resultCount),
+      parseFloat(ra),
+      parseFloat(dec),
+      parseInt(radius)
+    )
+    return res
+  } else if (intent === 'new-note') {
+    const noteTitle = data.get('title')?.toString()
+    const noteBody = data.get('notes')?.toString()
+    if (!noteBody || !noteTitle) {
+      return null
+    }
+    await createNewNote(noteTitle, noteBody, userID)
+
     return null
-  const res = await getInstrumentData(
-    instrument,
-    format,
-    parseInt(resultCount),
-    parseFloat(ra),
-    parseFloat(dec),
-    parseInt(radius)
-  )
-  return res
+  } else {
+    return null
+  }
 }
 
 export default function () {
@@ -51,13 +74,30 @@ export default function () {
   const [radius, setRadius] = useState('')
   const [resultCount, setResultCount] = useState('')
   const isValid = validateResultCountInput(resultCount)
+  const [noteTitle, setNoteTitle] = useState('')
+  const [noteBody, setNoteBody] = useState('')
+
+  const noteRef = useRef<HTMLFormElement>(null)
 
   const fetcher = useFetcher()
   const results = fetcher.data
+  const fetchNotes = useFetcher()
+  const notes = useLoaderData<typeof loader>()
   const resultArray = results?.request || ['no results']
 
   const shouldDisableForm =
     !instrument || !format || !resultCount || !isValid || !ra || !dec || !radius
+  const shouldDisableNotes = !noteTitle || !noteBody
+
+  useEffect(() => {
+    if (
+      fetchNotes.state === 'idle' &&
+      fetchNotes.data === null &&
+      noteRef.current
+    ) {
+      noteRef.current.reset()
+    }
+  }, [fetchNotes.state, fetchNotes.data])
 
   return (
     <div>
@@ -163,6 +203,36 @@ export default function () {
               </FormGroup>
             </fetcher.Form>
           </Grid>
+          <Grid tablet={{ col: true }} className="bg-primary-lighter">
+            <h2 className="text-center">Take Notes:</h2>
+            <fetchNotes.Form method="POST" className="margin-2" ref={noteRef}>
+              <input hidden name="intent" defaultValue="new-note" />
+              <Label htmlFor="title">Title</Label>
+              <TextInput
+                type="text"
+                id="title"
+                name="title"
+                placeholder="Title"
+                onChange={(e) => {
+                  setNoteTitle(e.target.value)
+                }}
+              />
+              <Label htmlFor="notes">Notes</Label>
+              <Textarea
+                id="notes"
+                name="notes"
+                placeholder="Notes"
+                onChange={(e) => {
+                  setNoteBody(e.target.value)
+                }}
+              />
+              <FormGroup>
+                <Button type="submit" disabled={shouldDisableNotes}>
+                  Submit
+                </Button>
+              </FormGroup>
+            </fetchNotes.Form>
+          </Grid>
         </Grid>
         <hr></hr>
         <Grid row>
@@ -178,6 +248,20 @@ export default function () {
                 </GridContainer>
               )
             })}
+          </Grid>
+          <Grid
+            tablet={{ col: true }}
+            className="bg-base-lightest margin-bottom-5"
+          >
+            <h2 className="margin-left-2">Notes:</h2>
+            <ul>
+              {notes &&
+                notes.map((x) => (
+                  <li key={x.noteId}>
+                    <Link to={`/notes/${x.noteId}`}>{x.noteTitle}</Link>
+                  </li>
+                ))}
+            </ul>
           </Grid>
         </Grid>
       </GridContainer>
