@@ -303,6 +303,37 @@ Merging PRs is often a single button click. When a PR is approved, individuals w
 
 Resolving conflicts during PR merging addresses situations where incompatible changes have been made in both the source and target branches.
 
+### Staying Up to Date
+
+It is important to keep your fork of a repository updated with the latest changes in the parent repo. The default method would be to utilize the Sync Fork feature on your forked repository.
+
+If your code is up to date, you should see a message on your fork's github page that reads:
+
+      'This branch is up to date with <parent_repo:parent_branch>'
+
+Otherwise you will see a message telling you how many commits behind the tracked branch you are:
+
+      'This branch is # commit(s) behind <parent_repo:parent_branch>'
+
+In that same block, there are two buttons: 'Contribute' and 'Sync fork'. The Sync button will automatically pull and merge the commits from the parent.
+
+Another method to handle this is to add a new upstream remote to your local clone of your repo and configure the main branch to track it. "Remote" refers to a version of a repository that is hosted on a separate server or location from your local repository, in this case, the original repo.
+
+Make sure you are on your main branch and run the following commands to add the new remote to your local clone:
+
+      git checkout main
+      git remote add upstream <url_of_parent_repo>
+
+Pull the latest refs to branches and changes for the new remote
+
+      git fetch upstream
+
+Set your main branch to track the upstream main
+
+      git branch --set-upstream-to upstream/main
+
+Now, whenever you run `git pull` from your main branch, it will pull the latest changes from the parent repo.
+
 ## Etiquette for FOSS Projects
 
 ### Introduction to FOSS (Free and Open Source Software)
