@@ -86,7 +86,7 @@
 
   Push it out
 
-      git push
+      git push --set-upstream origin <your_branch_name>
 
 ## Make a PR, review someone else’s!
 
