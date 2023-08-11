@@ -84,3 +84,37 @@ export async function getNotes(userId: string) {
   })
   return results.Items
 }
+
+export async function getNote(noteId: string, userId: string) {
+  const db = await tables()
+  const result = await db.notes.get({ userId, noteId })
+
+  return result
+}
+
+export async function updateNote(
+  userId: string,
+  noteId: string,
+  noteBody: string
+) {
+  const db = await tables()
+  const result = await db.notes.update({
+    Key: {
+      userId,
+      noteId,
+    },
+    UpdateExpression: 'set noteBody = :noteBody',
+    ExpressionAttributeValues: {
+      ':noteBody': noteBody,
+    },
+  })
+  return result
+}
+
+export async function deleteNote(userId: string, noteId: string) {
+  const db = await tables()
+  await db.notes.delete({
+    userId,
+    noteId,
+  })
+}
