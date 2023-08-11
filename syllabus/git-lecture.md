@@ -51,19 +51,18 @@ There are a couple options for starting a new repository: `git init` and `git cl
 
   - Add the remote URL to your local git repository:
 
-    `git remote add origin <URL>`
+         git remote add origin <URL>
 
     This stores the remote URL under a more human-friendly name, origin.
 
   - Shape your history into at least one commit:
 
-    `git add .`
-
-    `git commit -m "First Commit"`
+         git add .
+         git commit -m "First Commit"
 
   - Once you have at least one commit, you can push to the remote and set up the tracking relationship for good:
 
-    `git push -u origin master`
+         git push -u origin master
 
 - `git clone`: The Remote Already Exists
 
@@ -75,25 +74,24 @@ A typical workflow for making changes and commiting them to a repo would be the 
 
 - Make a new branch:
 
-  `git branch <branch_name>`
+      git branch <branch_name>
 
 - Switch to the new branch:
 
-  `git checkout <branch_name>`
+      git checkout <branch_name>
 
-  - Or at the same time:
+- Or at the same time:
 
-    `git checkout -b <branch_name>`
+      git checkout -b <branch_name>
 
 - Add changes and commit
 
-  `git add <...>`
-
-  `git commit -m "A brief message about the changes"`
+      git add <...>
+      git commit -m "A brief message about the changes"
 
 - Push your local changes to the remote repository
 
-  `git push`
+      git push
 
 #### Reviewing History and Reverting Changes
 
@@ -136,54 +134,62 @@ We will focus on the SSH method to clone the repo.
 
 Once you have installed git and created a GitHub account:
 
-1. **Generate and Add SSH Key to Your GitHub Account**:
+1.  **Generate and Add SSH Key to Your GitHub Account**:
 
-   [Read more here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+    [Read more here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-   - Open a terminal (Command Prompt on Windows, Terminal on macOS/Linux).
-   - Generate a new SSH key using the command:
+    - Open a terminal (Command Prompt on Windows, Terminal on macOS/Linux).
+    - Generate a new SSH key using the command:
 
-     `ssh-keygen -t ed25519 -C "your_email@example.com"`
-     (replace with your email).
+            ssh-keygen -t ed25519 -C "your_email@example.com"
 
-   - Press Enter to confirm the default file location and set a passphrase (or leave it empty for no passphrase).
-   - Start the SSH agent using: `eval "$(ssh-agent -s)"`.
-   - Add your private key to the SSH agent: `ssh-add ~/.ssh/id_ed25519`.
+    - Press Enter to confirm the default file location and set a passphrase (or leave it empty for no passphrase).
 
-1. **Copy Your SSH Public Key**:
+    - Start the SSH agent using:
 
-   - Display your public key using: `cat ~/.ssh/id_ed25519.pub`.
-   - Copy the entire key displayed in the terminal.
+            eval "$(ssh-agent -s)"
 
-1. **Add SSH Key to GitHub**:
+    - Add your private key to the SSH agent:
 
-   [Read more here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=windows)
+            ssh-add ~/.ssh/id_ed25519
 
-   - Log in to your GitHub account.
-   - Click on your profile picture in the top-right corner, and then select "Settings."
-   - In the left sidebar, click on "SSH and GPG keys."
-   - Click on the "New SSH key" button.
-   - Give your key a title (e.g., "Personal Laptop") and paste your copied SSH public key into the "Key" field.
-   - Click the "Add SSH key" button.
+1.  **Copy Your SSH Public Key**:
 
-1. **Find the Repository to Clone**:
+    - Display your public key:
 
-   - Log in to your GitHub account.
-   - Navigate to the repository you want to clone. You can search for repositories or access them directly through their URLs.
+            cat ~/.ssh/id_ed25519.pub
 
-1. **Clone the Repository with SSH**:
+    - Copy the entire key displayed in the terminal.
 
-   - On the repository page, locate the green "Code" button.
-   - Click on the button to reveal a dropdown menu.
-   - Make sure "SSH" is selected and click the clipboard icon to copy the SSH URL.
+1.  **Add SSH Key to GitHub**:
 
-1. **Open a Terminal (Command Prompt) and Navigate to the Directory Where You Want to Clone the Repository**:
+    [Read more here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=windows)
 
-1. **Clone the Repository**:
+    - Log in to your GitHub account.
+    - Click on your profile picture in the top-right corner, and then select "Settings."
+    - In the left sidebar, click on "SSH and GPG keys."
+    - Click on the "New SSH key" button.
+    - Give your key a title (e.g., "Personal Laptop") and paste your copied SSH public key into the "Key" field.
+    - Click the "Add SSH key" button.
 
-   - In the terminal, type `git clone` followed by a space.
-   - Paste the copied SSH URL.
-   - Press Enter. This will initiate the cloning process using SSH.
+1.  **Find the Repository to Clone**:
+
+    - Log in to your GitHub account.
+    - Navigate to the repository you want to clone. You can search for repositories or access them directly through their URLs.
+
+1.  **Clone the Repository with SSH**:
+
+    - On the repository page, locate the green "Code" button.
+    - Click on the button to reveal a dropdown menu.
+    - Make sure "SSH" is selected and click the clipboard icon to copy the SSH URL.
+
+1.  **Open a Terminal (Command Prompt) and Navigate to the Directory Where You Want to Clone the Repository**:
+
+1.  **Clone the Repository**:
+
+    - In the terminal, type `git clone` followed by a space.
+    - Paste the copied SSH URL.
+    - Press Enter. This will initiate the cloning process using SSH.
 
 Congratulations! You've successfully cloned a repository from GitHub to your local machine using the SSH method. You can now work with the code, make changes, and collaborate with others using Git and GitHub.
 
