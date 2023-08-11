@@ -70,8 +70,8 @@
 
 - Make some changes:
 
-  - Add a new file `<your_name>.md`
-  - Make a list in the file. Include your name and some kind of icebreaker. Example:
+  - Add a new file `<your_name>.md` in the `app/routes/` folder
+  - Make a list in the file. Include your name and a note about a hobby you enjoy. Example:
 
         - Hi I am Dakota
         - I like making music!
