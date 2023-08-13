@@ -110,3 +110,5 @@ The [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) allows you t
     ```
 
     The URL will differ for each participant. Open the URL in a browser. You should see your site live!
+
+6.  To study the generated CloudFormation template, look at the generated file `sam.yaml` in the root of your project. Compare the contents of `sam.yaml` with the actual resources that you see in the AWS Console!
