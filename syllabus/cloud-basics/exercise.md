@@ -68,15 +68,15 @@ The [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) allows you t
 
 3.  If you are switching from dev mode to deployment, then run the following command to delete some dev files that just add bloat when you are deploying (chiefly, [esbuild metafiles](https://esbuild.github.io/api/#metafile)):
 
-    npm run clean
+        npm run clean
 
 4.  Run the following command to compile and bundle the code for deployment:
 
-    npm run build
+        npm run build
 
 5.  Run the following command to generate the project's CloudFormation template and deploy it to AWS:
 
-    npm run deploy
+        npm run deploy
 
     After a few minutes, the command should finish, and look roughly like this:
 
