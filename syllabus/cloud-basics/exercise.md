@@ -32,18 +32,18 @@ The [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) allows you t
 
 3.  Complete multi-factor authentication for the CLI. We have include the shell script [awsmfa.sh](awsmfa.sh) that you can use. In your terminal, run the command `source syllabus/cloud-basics/awsmfa.sh` and enter the token code from your MFA device. The output should look like this:
 
-        ```
-        $ source syllabus/cloud-basics/awsmfa.sh
-        User Name: sally-ride
-        MFA Device: google-authenticator-on-iphone
-        🔑 Enter your MFA code now:
-        Your session expires at 2023-08-14T09:34:49+00:00
-        Setting the following environment variables in your shell:
-        ARC_AWS_CREDS
-        AWS_ACCESS_KEY_ID
-        AWS_SECRET_ACCESS_KEY
-        AWS_SESSION_TOKEN
-        ```
+    ```
+    $ source syllabus/cloud-basics/awsmfa.sh
+    User Name: sally-ride
+    MFA Device: google-authenticator-on-iphone
+    🔑 Enter your MFA code now:
+    Your session expires at 2023-08-14T09:34:49+00:00
+    Setting the following environment variables in your shell:
+    ARC_AWS_CREDS
+    AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY
+    AWS_SESSION_TOKEN
+    ```
 
 ## Build and Deploy the App
 
