@@ -19,11 +19,11 @@ Git is a free and open source distributed version control system designed to han
 
   - Commits can be thought of as snapshots along the timeline of a Git project. These snapshots contain the current contents of the index and the given log message describing the changes. The content to be committed can be specified in several ways:
 
-    - by using `git-add` to incrementally "add" changes to the index before using the commit command (Note: even modified files must be "added");
+    - `git-add`: incrementally "add" changes to the index before using the commit command (Note: even modified files must be "added");
 
-    - by using `git-rm` to remove files from the working tree and the index, again before using the commit command;
+    - `git-rm`: to remove files from the working tree and the index, again before using the commit command;
 
-    - by listing files as arguments to the commit command (without `--interactive` or `--patch switch`), in which case the commit will ignore changes staged in the index, and instead record the current content of the listed files (which must already be known to Git);
+    - by listing files as arguments to the commit command (without `--interactive` or `--patch` switch), in which case the commit will ignore changes staged in the index, and instead record the current content of the listed files (which must already be known to Git);
 
     - by using the -a switch with the commit command to automatically "add" changes from all known files (i.e. all files that are already listed in the index) and to automatically "rm" files in the index that have been removed from the working tree, and then perform the actual commit;
 
@@ -67,6 +67,8 @@ There are a couple options for starting a new repository: `git init` and `git cl
 - `git clone`: The Remote Already Exists
 
   If the repository already exists on a remote, you would choose to git clone and not git init.
+
+         git clone <url to repo>
 
 #### Making Changes and Committing
 
@@ -112,7 +114,7 @@ In Git, reviewing history and reverting changes are essential tasks for managing
     - `git reset`: Resets the repository to a previous state, effectively removing commits from history. Be cautious with this command, as it can lead to data loss and is suitable for private/local repositories.
     - `git checkout`: Discards changes in the working directory and reverts files to a previous state.
 
-Remember, reviewing history and reverting changes are critical tasks, and understanding the potential consequences is essential to avoid unintended data loss or conflicts. Always make sure to back up your work and use version control judiciously to maintain a reliable and organized codebase.
+Remember, reviewing history and reverting changes are critical tasks, and understanding the potential consequences is essential to avoid unintended data loss or conflicts.
 
 ## Introduction to GitHub
 
@@ -267,33 +269,33 @@ When reviewing pull requests (PRs), several important points should be considere
 
 1. **Understand the Context**: Familiarize yourself with the purpose of the changes, the problem being addressed, and the overall goal of the pull request.
 
-2. **Code Quality**: Assess the code for clarity, readability, and adherence to coding standards. Ensure variable names, comments, and formatting are consistent and maintainable.
+1. **Code Quality**: Assess the code for clarity, readability, and adherence to coding standards. Ensure variable names, comments, and formatting are consistent and maintainable.
 
-3. **Functionality and Logic**: Verify that the changes function as intended and do not introduce new bugs or regressions. Evaluate the logic and ensure it aligns with the project's requirements.
+1. **Functionality and Logic**: Verify that the changes function as intended and do not introduce new bugs or regressions. Evaluate the logic and ensure it aligns with the project's requirements.
 
-4. **Testing**: Check if appropriate tests have been added or updated to cover the changes. Verify that existing tests still pass and that new code is adequately tested.
+1. **Code Review Tools**: Utilize code review tools and linting to automate and enhance the review process, catching common issues and maintaining consistency.
 
-5. **Performance**: Consider the impact of the changes on performance. Ensure that resource usage, response times, and scalability remain acceptable.
+1. **Testing**: Check if appropriate tests have been added or updated to cover the changes. Verify that existing tests still pass and that new code is adequately tested.
 
-6. **Security**: Assess the code for potential security vulnerabilities or risks. Look for areas where user input may not be properly sanitized or validated.
+1. **Testing the PR**: If feasible, test the pull request locally to validate its functionality and to provide more accurate feedback.
 
-7. **Documentation**: Review any new documentation, including code comments, README files, and user-facing documentation. Ensure that it is accurate, complete, and clear.
+1. **Performance**: Consider the impact of the changes on performance. Ensure that resource usage, response times, and scalability remain acceptable.
 
-8. **Comments and Feedback**: Provide constructive feedback that helps the contributor understand any suggested improvements. Focus on actionable suggestions rather than just pointing out issues.
+1. **Security**: Assess the code for potential security vulnerabilities or risks. Look for areas where user input may not be properly sanitized or validated.
 
-9. **Scope and Design**: Evaluate whether the changes align with the project's design and architecture. Consider long-term maintainability and extensibility.
+1. **Scope and Design**: Evaluate whether the changes align with the project's design and architecture. Consider long-term maintainability and extensibility.
 
-10. **Dependencies**: Check if the changes impact or are impacted by other parts of the codebase. Ensure that the changes integrate smoothly with existing functionality.
+1. **Dependencies**: Check if the changes impact or are impacted by other parts of the codebase. Ensure that the changes integrate smoothly with existing functionality.
 
-11. **Code Review Tools**: Utilize code review tools and linting to automate and enhance the review process, catching common issues and maintaining consistency.
+1. **Documentation**: Review any new documentation, including code comments, README files, and user-facing documentation. Ensure that it is accurate, complete, and clear.
 
-12. **Communication**: Engage in respectful and clear communication with the contributor. Address questions and concerns promptly and ensure a collaborative atmosphere.
+1. **Comments and Feedback**: Provide constructive feedback that helps the contributor understand any suggested improvements. Focus on actionable suggestions rather than just pointing out issues.
 
-13. **Testing the PR**: If feasible, test the pull request locally to validate its functionality and to provide more accurate feedback.
+1. **Communication**: Engage in respectful and clear communication with the contributor. Address questions and concerns promptly and ensure a collaborative atmosphere.
 
-14. **Respect the Author's Intent**: While suggesting improvements, respect the original author's intent and approach. Provide alternatives rather than imposing drastic changes.
+1. **Respect the Author's Intent**: While suggesting improvements, respect the original author's intent and approach. Provide alternatives rather than imposing drastic changes.
 
-15. **Approval and Merging**: Once satisfied with the changes, approve the PR or indicate any final changes required before merging. Ensure that the PR aligns with project guidelines and practices.
+1. **Approval and Merging**: Once satisfied with the changes, approve the PR or indicate any final changes required before merging. Ensure that the PR aligns with project guidelines and practices.
 
 Effective pull request reviews promote code quality, knowledge sharing, and teamwork within a development team, ultimately leading to a more robust and reliable codebase.
 
