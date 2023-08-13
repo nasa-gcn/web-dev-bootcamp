@@ -24,12 +24,15 @@ The [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) allows you t
 
     - With your favorite text editor, create a file with the path `~/.aws/credentials` and paste the access key and secret access key into it. The contents of the file should look like this:
 
+      ```
       [default]
       aws_access_key_id=paste-access-key-id-here
       aws_access_key_id=paste-secret-access-key-id-here
+      ```
 
 3.  Complete multi-factor authentication for the CLI. We have include the shell script [awsmfa.sh](awsmfa.sh) that you can use. In your terminal, run the command `source syllabus/cloud-basics/awsmfa.sh` and enter the token code from your MFA device. The output should look like this:
 
+        ```
         $ source syllabus/cloud-basics/awsmfa.sh
         User Name: sally-ride
         MFA Device: google-authenticator-on-iphone
@@ -40,6 +43,7 @@ The [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) allows you t
         AWS_ACCESS_KEY_ID
         AWS_SECRET_ACCESS_KEY
         AWS_SESSION_TOKEN
+        ```
 
 ## Build and Deploy the App
 
