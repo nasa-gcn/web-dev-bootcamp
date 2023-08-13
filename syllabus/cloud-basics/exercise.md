@@ -50,3 +50,63 @@ The [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) allows you t
 ## Build and Deploy the App
 
 1.  **Very important**: All of the workshop participants are logging in (as separate users) to a _single AWS account_. To avoid overwriting other student's apps, _it is essential that you change the name of the application_.
+
+    - Edit the file called `app.arc` in the root of this project.
+
+    - You will find a section that looks like this:
+
+      ```
+      @app
+      remix-architect-app
+      ```
+
+      Replace the text `remix-architect-app` with something unique --- for example, your initials and your favorite food.
+
+      (This text sets the name of the CloudFormation template.)
+
+2.  Make sure that you are _not_ running the local dev server: if you are running `npm run dev` in any terminal, then kill it.
+
+3.  If you are switching from dev mode to deployment, then run the following command to delete some dev files that just add bloat when you are deploying (chiefly, [esbuild metafiles](https://esbuild.github.io/api/#metafile)):
+
+    npm run clean
+
+4.  Run the following command to compile and bundle the code for deployment:
+
+    npm run build
+
+5.  Run the following command to generate the project's CloudFormation template and deploy it to AWS:
+
+    npm run deploy
+
+    After a few minutes, the command should finish, and look roughly like this:
+
+    ```
+    $ npm run deploy
+
+    > deploy
+    > arc deploy --no-hydrate --prune --production
+
+            App ⌁ skr-pork-chops
+          Region ⌁ us-east-1
+        Profile ⌁ Set via environment
+        Version ⌁ Architect 10.13.3
+            cwd ⌁ /Users/skride/web-dev-bootcamp
+
+    ⚬ Deploy Creating new private deployment bucket: skr-pork-chops-cfn-deployments-f93c2
+    ⚬ Deploy Initializing deployment
+      | Stack ... SkrPorkChopsProduction
+      | Bucket .. skr-pork-chops-cfn-deployments-f93c2
+    ⚬ Deploy Created deployment templates
+    ✓ Deploy Generated CloudFormation deployment
+    ⚬ Deploy Deploying static assets...
+    ✓ Deploy Static asset fingerprinting enabled
+    ✓ Deploy Orphaned file pruning enabled
+    ...
+    ✓ Deploy Deployed 99 static assets from build/static/
+    ✓ Deploy Deployed & built infrastructure
+    ✓ Success! Deployed app in 123.259 seconds
+
+        https://l5oxh39q1o.execute-api.us-east-1.amazonaws.com
+    ```
+
+    The URL will differ for each participant. Open the URL in a browser. You should see your site live!
