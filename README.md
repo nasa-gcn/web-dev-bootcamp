@@ -29,6 +29,7 @@
     <tr><td>TBD</td><td><a href="syllabus/web-dev-exercise.md">Web Dev Exercise</a></td><td>Courey</td>
     <tr><td colspan="2"><b>Tuesday, 08/15/2023, GSFC Building 34 Room W305</b></td><td></td></tr>
     <tr><td>10:00-11:30</td><td><a href="syllabus/tutorial-walkthrough.md">Tutorial Walkthrough</a></td><td>Courey</td>
-    <tr><td>13:00-14:00</td><td><a href="syllabus/cloud-basics-lecture.md">Cloud Basics Lecture</a></td><td>Leo</td>
+    <tr><td>13:00-13:30</td><td><a href="syllabus/cloud-basics/lecture.md">Cloud Basics Lecture</a></td><td>Leo</td>
+    <tr><td>13:30-14:00</td><td><a href="syllabus/cloud-basics/exercise.md">Cloud Basics Exercise</a></td><td>Leo</td>
   </tbody>
 </table>
