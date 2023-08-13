@@ -33,6 +33,7 @@ source <(
   >&2 echo '  AWS_ACCESS_KEY_ID'
   >&2 echo '  AWS_SECRET_ACCESS_KEY'
   >&2 echo '  AWS_SESSION_TOKEN'
+  # ARC_AWS_CREDS is needed by https://arc.codes/, but not for general AWS use
   printf 'export ARC_AWS_CREDS=env\n'
   printf 'export AWS_ACCESS_KEY_ID="%s"\n' "${AWS_ACCESS_KEY_ID}"
   printf 'export AWS_SECRET_ACCESS_KEY="%s"\n' "${AWS_SECRET_ACCESS_KEY}"
