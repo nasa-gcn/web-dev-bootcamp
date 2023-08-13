@@ -45,6 +45,8 @@ The [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) allows you t
     AWS_SESSION_TOKEN
     ```
 
+    You will need to re-run this script in any shell in which you want to use the AWS CLI to interact with your SMCE AWS account, or every time that your session expires.
+
 ## Build and Deploy the App
 
 1.  **Very important**: All of the workshop participants are logging in (as separate users) to a _single AWS account_. To avoid overwriting other student's apps, _it is essential that you change the name of the application_.
