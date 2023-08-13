@@ -40,3 +40,7 @@ The [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) allows you t
         AWS_ACCESS_KEY_ID
         AWS_SECRET_ACCESS_KEY
         AWS_SESSION_TOKEN
+
+## Build and Deploy the App
+
+1.  **Very important**: All of the workshop participants are logging in (as separate users) to a _single AWS account_. To avoid overwriting other student's apps, _it is essential that you change the name of the application_.
