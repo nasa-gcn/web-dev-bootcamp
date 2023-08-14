@@ -1,1 +1,3 @@
-- Hello World!
+- Hi I am Ava
+- I like arts and crafts
+  - Especially sewing :)
