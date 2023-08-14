@@ -33,3 +33,11 @@
     <tr><td>13:30-14:00</td><td><a href="syllabus/cloud-basics/exercise.md">Cloud Basics Exercise</a></td><td>Leo</td>
   </tbody>
 </table>
+
+## About This Repository
+
+This repository is based on [Americana](https://github.com/nasa-gcn/americana-stack), a project template for [Remix](https://remix.run) preconfigured with the [US Web Design System (USWDS)](https://designsystem.digital.gov). To start a fresh project from that template _without_ the tutorial materials, run this command:
+
+    npx create-remix@latest --template nasa-gcn/americana-stack
+
+Learn more about [Remix Stacks](https://remix.run/stacks).
