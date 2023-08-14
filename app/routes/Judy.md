@@ -1,2 +1,3 @@
 - Hi, I am Judy
 - I like to bake!
+- My favorite thing to bake is cake, but also bread, pastry, and many other things.
