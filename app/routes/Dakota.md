@@ -1,2 +1,3 @@
 - Hi I am Dakota
 - I like making music!
+  - Metal is cool
