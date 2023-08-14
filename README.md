@@ -24,7 +24,8 @@
     <tr><td colspan="3"><b>Monday, 08/14/2023, GSFC Building 34 Room E215</b></td></tr>
     <tr><td>10:00-10:30</td><td>Orientation, Prerequisites Office Hours</td><td></td></tr>
     <tr><td>10:30-11:00</td><td><a href="syllabus/git-lecture.md">Git Lecture</a></td><td>Dakota</td>
-    <tr><td>11:00-11:30</td><td><a href="syllabus/git-exercise.md">Git Exercise</a></td><td>Dakota</td>
+    <tr><td>11:00-12:00</td><td><a href="syllabus/git-exercise.md">Git Exercise</a></td><td>Dakota</td>
+    <tr><td>13:00-14:00</td><td><a href="syllabus/git-exercise.md">Git Exercise (continued)</a></td><td>Dakota</td>
     <tr><td>TBD</td><td><a href="syllabus/modern-javascript.md">Modern JavaScript Lecture</a></td><td>Courey</td>
     <tr><td>TBD</td><td><a href="syllabus/web-dev-exercise.md">Web Dev Exercise</a></td><td>Courey</td>
     <tr><td colspan="2"><b>Tuesday, 08/15/2023, GSFC Building 34 Room W305</b></td><td></td></tr>
