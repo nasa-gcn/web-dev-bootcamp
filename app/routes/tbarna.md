@@ -1,0 +1,3 @@
+- My name is Tyler Barna
+- I am a graduate student at the University of Minnesota
+- I enjpy all genres of music, but I particularly enjoy rock.
