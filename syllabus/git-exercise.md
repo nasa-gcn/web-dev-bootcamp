@@ -46,7 +46,7 @@
 
 - Click Add SSH Key
 
-## Fork the [tutorial repo](https://github.com/nasa-gcn/americana-stack-tutorial)
+## Fork the [tutorial repo](https://github.com/nasa-gcn/web-dev-bootcamp)
 
 - Navigate to the tutorial repo in your browser of choice
 
