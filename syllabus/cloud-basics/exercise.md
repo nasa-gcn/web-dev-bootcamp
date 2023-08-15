@@ -27,7 +27,7 @@ The [AWS Command Line Interface (CLI)](https://aws.amazon.com/cli/) allows you t
       ```
       [default]
       aws_access_key_id=paste-access-key-id-here
-      aws_access_key_id=paste-secret-access-key-id-here
+      aws_secret_access_key=paste-secret-access-key-id-here
       ```
 
 3.  Complete multi-factor authentication for the CLI. We have include the shell script [awsmfa.sh](awsmfa.sh) that you can use. In your terminal, run the command `source syllabus/cloud-basics/awsmfa.sh` and enter the token code from your MFA device. The output should look like this:
