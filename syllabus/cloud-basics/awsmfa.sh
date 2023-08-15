@@ -1,6 +1,5 @@
 # Complete MFA sign in for the AWS CLI.
-
-source <(
+eval $(
   unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID
 
   user_name="$(aws sts get-caller-identity --output text --query Arn | sed 's,.*user/,,')"
@@ -33,9 +32,9 @@ source <(
   >&2 echo '  AWS_ACCESS_KEY_ID'
   >&2 echo '  AWS_SECRET_ACCESS_KEY'
   >&2 echo '  AWS_SESSION_TOKEN'
+
   # ARC_AWS_CREDS is needed by https://arc.codes/, but not for general AWS use
-  printf 'export ARC_AWS_CREDS=env\n'
-  printf 'export AWS_ACCESS_KEY_ID="%s"\n' "${AWS_ACCESS_KEY_ID}"
-  printf 'export AWS_SECRET_ACCESS_KEY="%s"\n' "${AWS_SECRET_ACCESS_KEY}"
-  printf 'export AWS_SESSION_TOKEN="%s"\n' "${AWS_SESSION_TOKEN}"
+  ARC_AWS_CREDS=env
+
+  printf 'export ARC_AWS_CREDS="%s" AWS_ACCESS_KEY_ID="%s" AWS_SECRET_ACCESS_KEY="%s" AWS_SESSION_TOKEN="%s"' "${ARC_AWS_CREDS}" "${AWS_ACCESS_KEY_ID}" "${AWS_SECRET_ACCESS_KEY}" "${AWS_SESSION_TOKEN}"
 )
