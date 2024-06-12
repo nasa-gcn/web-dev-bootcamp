@@ -4,11 +4,12 @@ import {
   Links,
   LiveReload,
   Meta,
+  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react'
-import { GovBanner, GridContainer } from '@trussworks/react-uswds'
+import { GovBanner, GridContainer, PrimaryNav } from '@trussworks/react-uswds'
 
 import theme from './theme.css'
 import favicon_16 from '~/../node_modules/@uswds/uswds/dist/img/favicons/favicon-16.png'
@@ -51,6 +52,20 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <PrimaryNav
+          className="margin-top-1"
+          items={[
+            <NavLink className="" to="/notes" key="/notes">
+              Notes
+            </NavLink>,
+            <NavLink className="" to="/data" key="/data">
+              Data
+            </NavLink>,
+            <NavLink className="" to="/" key="/">
+              Home
+            </NavLink>,
+          ]}
+        ></PrimaryNav>
         <a className="usa-skipnav" href="#main-content">
           Skip to main content
         </a>
